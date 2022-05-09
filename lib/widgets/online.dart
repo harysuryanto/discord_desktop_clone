@@ -10,6 +10,7 @@ class Online extends StatelessWidget {
       width: 150,
       color: grey3,
       child: ListView(
+        controller: ScrollController(),
         children: const [
           Text('online'),
         ],

@@ -10,6 +10,7 @@ class Chat extends StatelessWidget {
       child: Container(
         color: grey4,
         child: ListView(
+          controller: ScrollController(),
           children: const [
             Text('chat'),
           ],
