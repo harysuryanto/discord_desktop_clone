@@ -20,18 +20,78 @@ class ChannelList extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                child: Text('RPL-B Squad'),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('RPL-B Squad',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    IconButton(
+                        icon: const Icon(FluentIcons.chevron_down),
+                        onPressed: () {})
+                  ],
+                ),
               ),
               const Divider(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('> TEXT CHANNELS'),
+                        IconButton(
+                            icon: const Icon(FluentIcons.add), onPressed: () {})
+                      ],
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text('# ngobrol-santai'),
+                          Row(
+                            children: [
+                              IconButton(
+                                  icon: const Icon(FluentIcons.add_friend),
+                                  onPressed: () {}),
+                              IconButton(
+                                  icon: const Icon(FluentIcons.settings),
+                                  onPressed: () {}),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               const Spacer(),
               Container(
                 width: double.maxFinite,
                 padding: const EdgeInsets.all(12),
                 color: grey2,
                 child: Row(children: [
-                  CircleAvatar(backgroundColor: Colors.yellow, radius: 16),
+                  Stack(
+                    children: [
+                      CircleAvatar(backgroundColor: Colors.yellow, radius: 16),
+                      const Positioned(
+                        bottom: -3,
+                        right: -3,
+                        child: CircleAvatar(
+                          radius: 7,
+                          backgroundColor: grey2,
+                          child: CircleAvatar(
+                            radius: 4,
+                            backgroundColor: green,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Column(
