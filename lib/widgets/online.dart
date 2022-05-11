@@ -25,7 +25,7 @@ class Online extends StatelessWidget {
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
                   username: 'Dicka',
-                  activity: 'Mancing',
+                  activity: '🎣 Mancing',
                 ),
                 SizedBox(height: 10),
                 OnlineListTile(
@@ -43,6 +43,7 @@ class Online extends StatelessWidget {
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/871388221836251166/04fa62bc9241e82f1587328146d448d7.webp?size=32',
                   username: 'King Jom-Uy',
+                  activity: '💣 Playing with my nuclear button',
                 ),
               ],
             ),
