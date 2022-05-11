@@ -31,7 +31,7 @@ class OnlineListTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(username),
-              if (activity != null)
+              if (isOnline && activity != null)
                 Text(activity!, style: const TextStyle(fontSize: 11)),
             ],
           )
