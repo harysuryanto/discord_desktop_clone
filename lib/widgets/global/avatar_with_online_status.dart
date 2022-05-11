@@ -25,7 +25,7 @@ class AvatarWithOnlineStatus extends StatelessWidget {
             color: grey4,
             borderRadius: BorderRadius.circular(16),
           ),
-          clipBehavior: Clip.hardEdge,
+          clipBehavior: Clip.antiAlias,
           child: imageUrl == null
               ? Center(child: Text(username.substring(0, 1)))
               : Image.network(imageUrl!),

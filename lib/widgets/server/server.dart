@@ -79,7 +79,7 @@ class _ServerListTileState extends State<ServerListTile> {
               isHovering ? hoveredBorderRadius : unhoveredBorderRadius,
         ),
         alignment: Alignment.center,
-        clipBehavior: Clip.hardEdge,
+        clipBehavior: Clip.antiAlias,
         child: child,
       ),
     );
