@@ -1,5 +1,5 @@
-import 'package:discord_desktop_clone/colors.dart';
-import 'package:discord_desktop_clone/widgets/avatar_with_online_status.dart';
+import '../colors.dart';
+import 'avatar_with_online_status.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

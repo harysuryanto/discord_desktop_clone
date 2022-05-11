@@ -1,8 +1,8 @@
-import 'package:discord_desktop_clone/widgets/channel_list.dart';
-import 'package:discord_desktop_clone/widgets/chat.dart';
-import 'package:discord_desktop_clone/widgets/online.dart';
-import 'package:discord_desktop_clone/widgets/server_list.dart';
-import 'package:discord_desktop_clone/widgets/window_wrapper.dart';
+import '../widgets/channel_list.dart';
+import '../widgets/chat.dart';
+import '../widgets/online.dart';
+import '../widgets/server_list.dart';
+import '../widgets/window_wrapper.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:window_manager/window_manager.dart';
 

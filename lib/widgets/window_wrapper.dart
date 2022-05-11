@@ -1,5 +1,5 @@
-import 'package:discord_desktop_clone/main.dart';
-import 'package:discord_desktop_clone/widgets/window_top_bar.dart';
+import '../main.dart';
+import 'window_top_bar.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
 class WindowWrapper extends StatelessWidget {

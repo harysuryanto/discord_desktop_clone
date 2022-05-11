@@ -1,5 +1,5 @@
-import 'package:discord_desktop_clone/colors.dart';
-import 'package:discord_desktop_clone/widgets/online_list_tile.dart';
+import '../colors.dart';
+import 'online_list_tile.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
 class Online extends StatelessWidget {

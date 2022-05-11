@@ -1,4 +1,4 @@
-import 'package:discord_desktop_clone/widgets/avatar_with_online_status.dart';
+import 'avatar_with_online_status.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
 class OnlineListTile extends StatelessWidget {

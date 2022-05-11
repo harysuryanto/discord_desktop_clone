@@ -1,5 +1,5 @@
-import 'package:discord_desktop_clone/colors.dart';
-import 'package:discord_desktop_clone/screens/server_screen.dart';
+import 'colors.dart';
+import 'screens/server_screen.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
