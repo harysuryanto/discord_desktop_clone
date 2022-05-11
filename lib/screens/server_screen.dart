@@ -36,21 +36,19 @@ class _MyHomePageState extends State<ServerScreen> with WindowListener {
           height: 22,
           child: WindowTitleBarBox(
             child: Row(
-              children: [
+              children: const [
                 Expanded(
                   child: DragToMoveArea(
-                    child: Align(
-                      alignment: AlignmentDirectional.centerStart,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: const [
-                          Text(appTitle),
-                        ],
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 6),
+                      child: Text(
+                        appTitle,
+                        style: TextStyle(fontSize: 12),
                       ),
                     ),
                   ),
                 ),
-                const WindowButtons(),
+                WindowButtons(),
               ],
             ),
           ),
