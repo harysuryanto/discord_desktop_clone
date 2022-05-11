@@ -36,6 +36,8 @@ class Online extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 OnlineListTile(
+                  imageUrl:
+                      'https://cdn.discordapp.com/avatars/452122817169981440/0bb70fc5a94d036bd678251b412889b3.webp?size=32',
                   username: 'Hary Suryanto',
                 ),
                 SizedBox(height: 10),
