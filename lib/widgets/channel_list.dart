@@ -1,7 +1,9 @@
+import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/foundation.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import '../colors.dart';
 import 'avatar_with_online_status.dart';
-import 'package:fluent_ui/fluent_ui.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ChannelList extends StatelessWidget {
   const ChannelList({
@@ -12,7 +14,9 @@ class ChannelList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(10)),
+        borderRadius: BorderRadius.only(
+          topLeft: kIsWeb ? Radius.circular(0) : Radius.circular(10),
+        ),
       ),
       clipBehavior: Clip.hardEdge,
       child: SizedBox(

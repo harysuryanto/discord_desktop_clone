@@ -1,7 +1,8 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
-import 'window_button.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:window_manager/window_manager.dart';
+
+import 'window_button.dart';
 
 class WindowTopBar extends StatelessWidget {
   const WindowTopBar({
@@ -13,25 +14,22 @@ class WindowTopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 22,
-      child: WindowTitleBarBox(
-        child: Row(
-          children: [
-            Expanded(
-              child: DragToMoveArea(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6),
-                  child: Text(
-                    appTitle,
-                    style: const TextStyle(fontSize: 12),
-                  ),
+    return WindowTitleBarBox(
+      child: Row(
+        children: [
+          Expanded(
+            child: DragToMoveArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Text(
+                  appTitle,
+                  style: const TextStyle(fontSize: 12),
                 ),
               ),
             ),
-            const WindowButtons(),
-          ],
-        ),
+          ),
+          const WindowButtons(),
+        ],
       ),
     );
   }
