@@ -1,8 +1,8 @@
-import '../widgets/channel_list.dart';
-import '../widgets/chat.dart';
-import '../widgets/online.dart';
-import '../widgets/server_list.dart';
-import '../widgets/window_wrapper.dart';
+import '../widgets/channel/channel.dart';
+import '../widgets/chat/chat.dart';
+import '../widgets/online/online.dart';
+import '../widgets/server/server.dart';
+import '../widgets/window/window_wrapper.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:window_manager/window_manager.dart';
 
@@ -32,8 +32,8 @@ class _MyHomePageState extends State<ServerScreen> with WindowListener {
       content: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: const [
-          ServerList(),
-          ChannelList(),
+          Server(),
+          Channel(),
           Chat(),
           Online(),
         ],

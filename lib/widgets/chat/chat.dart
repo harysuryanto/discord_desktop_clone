@@ -1,4 +1,4 @@
-import '../colors.dart';
+import '../../colors.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
 class Chat extends StatelessWidget {

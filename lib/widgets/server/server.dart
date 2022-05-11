@@ -1,8 +1,8 @@
-import '../colors.dart';
+import '../../colors.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
-class ServerList extends StatelessWidget {
-  const ServerList({Key? key}) : super(key: key);
+class Server extends StatelessWidget {
+  const Server({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -2,11 +2,11 @@ import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../colors.dart';
-import 'avatar_with_online_status.dart';
+import '../../colors.dart';
+import '../global/avatar_with_online_status.dart';
 
-class ChannelList extends StatelessWidget {
-  const ChannelList({
+class Channel extends StatelessWidget {
+  const Channel({
     Key? key,
   }) : super(key: key);
 

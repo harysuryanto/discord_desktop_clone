@@ -1,4 +1,4 @@
-import '../main.dart';
+import '../../main.dart';
 import 'window_top_bar.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
