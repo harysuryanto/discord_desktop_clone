@@ -1,11 +1,12 @@
-import 'colors.dart';
-import 'screens/server_screen.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 import 'package:system_theme/system_theme.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:window_manager/window_manager.dart';
+
+import 'colors.dart';
+import 'screens/server_screen.dart';
 
 const String appTitle = 'Discord';
 

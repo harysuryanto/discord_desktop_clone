@@ -1,6 +1,7 @@
+import 'package:fluent_ui/fluent_ui.dart';
+
 import '../../main.dart';
 import 'window_top_bar.dart';
-import 'package:fluent_ui/fluent_ui.dart';
 
 class WindowWrapper extends StatelessWidget {
   const WindowWrapper({Key? key, required this.content}) : super(key: key);

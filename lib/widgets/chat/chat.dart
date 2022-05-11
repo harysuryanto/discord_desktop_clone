@@ -1,5 +1,6 @@
-import '../../colors.dart';
 import 'package:fluent_ui/fluent_ui.dart';
+
+import '../../colors.dart';
 
 class Chat extends StatelessWidget {
   const Chat({Key? key}) : super(key: key);

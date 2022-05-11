@@ -1,5 +1,6 @@
-import '../global/avatar_with_online_status.dart';
 import 'package:fluent_ui/fluent_ui.dart';
+
+import '../global/avatar_with_online_status.dart';
 
 class OnlineListTile extends StatelessWidget {
   const OnlineListTile({

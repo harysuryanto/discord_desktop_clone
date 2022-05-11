@@ -1,6 +1,7 @@
+import 'package:fluent_ui/fluent_ui.dart';
+
 import '../../colors.dart';
 import 'online_list_tile.dart';
-import 'package:fluent_ui/fluent_ui.dart';
 
 class Online extends StatelessWidget {
   const Online({Key? key}) : super(key: key);

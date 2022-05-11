@@ -1,6 +1,6 @@
-import '../../colors.dart';
-
 import 'package:fluent_ui/fluent_ui.dart';
+
+import '../../colors.dart';
 
 class AvatarWithOnlineStatus extends StatelessWidget {
   const AvatarWithOnlineStatus({
