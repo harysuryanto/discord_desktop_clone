@@ -43,7 +43,7 @@ void main() async {
       // await windowManager.setSize(const Size(755, 545));
       await windowManager.setMinimumSize(const Size(755, 545));
       await windowManager.show();
-      await windowManager.setPreventClose(true);
+      // await windowManager.setPreventClose(false);
       await windowManager.setSkipTaskbar(false);
     });
   }
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
           glowFactor: is10footScreen() ? 2.0 : 0.0,
         ),
       ),
-      builder: (context, child) {
+      builder: (BuildContext context, Widget? child) {
         return Container(
           color: grey1, // Background color
           child: child!,
