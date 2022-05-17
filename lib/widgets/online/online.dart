@@ -10,7 +10,7 @@ class Online extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 240,
-      color: grey3,
+      color: backgroundSecondary,
       child: ListView(
         controller: ScrollController(),
         children: [
@@ -20,7 +20,13 @@ class Online extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text('ONLINE — 2'),
+                Text(
+                  'ONLINE — 4',
+                  style: TextStyle(
+                      color: channelsDefault,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12),
+                ),
                 SizedBox(height: 10),
                 OnlineListTile(
                   imageUrl:
@@ -47,6 +53,7 @@ class Online extends StatelessWidget {
                       'https://cdn.discordapp.com/avatars/871388221836251166/04fa62bc9241e82f1587328146d448d7.webp?size=32',
                   username: 'King Jom-Uy',
                   activity: '💣 Playing with my nuclear button',
+                  isAdmin: true,
                 ),
               ],
             ),
@@ -57,7 +64,13 @@ class Online extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
-                Text('OFFLINE — 23'),
+                Text(
+                  'OFFLINE — 23',
+                  style: TextStyle(
+                      color: channelsDefault,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12),
+                ),
                 SizedBox(height: 10),
                 OnlineListTile(
                   imageUrl:

@@ -22,7 +22,7 @@ class AvatarWithOnlineStatus extends StatelessWidget {
           width: 32,
           height: 32,
           decoration: BoxDecoration(
-            color: grey4,
+            color: backgroundPrimary,
             borderRadius: BorderRadius.circular(16),
           ),
           clipBehavior: Clip.antiAlias,
@@ -36,10 +36,10 @@ class AvatarWithOnlineStatus extends StatelessWidget {
             right: -3,
             child: CircleAvatar(
               radius: 7,
-              backgroundColor: grey2,
+              backgroundColor: backgroundSecondaryAlt,
               child: CircleAvatar(
                 radius: 4,
-                backgroundColor: green,
+                backgroundColor: statusOnline,
               ),
             ),
           ),

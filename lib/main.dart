@@ -62,6 +62,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const ServerScreen(),
       theme: ThemeData(
+        buttonTheme: ButtonThemeData.all(
+          ButtonStyle(
+            textStyle: ButtonState.resolveWith<TextStyle>(
+              (state) => const TextStyle(color: statusOnline),
+            ),
+            foregroundColor: ButtonState.resolveWith<Color>(
+              (state) => interactiveNormal,
+            ),
+          ),
+        ),
         brightness: Brightness.dark,
         accentColor: Colors.purple,
         visualDensity: VisualDensity.standard,
@@ -71,7 +81,7 @@ class MyApp extends StatelessWidget {
       ),
       builder: (BuildContext context, Widget? child) {
         return Container(
-          color: grey1, // Background color
+          color: backgroundTertiary, // Background color
           child: child!,
         );
       },

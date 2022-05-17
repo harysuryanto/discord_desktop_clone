@@ -28,7 +28,10 @@ class _ServerListTileState extends State<ServerListTile> {
       child: _buildRoundedRectangle(
         isHovering: isHovering,
         child: widget.imageUrl == null
-            ? Text(widget.serverName.substring(0, 1))
+            ? Text(
+                widget.serverName.substring(0, 1),
+                style: const TextStyle(color: textNormal),
+              )
             : Image.network(widget.imageUrl!),
       ),
     );
@@ -46,7 +49,7 @@ class _ServerListTileState extends State<ServerListTile> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
-          color: isHovering ? blueAccent : grey4,
+          color: isHovering ? serverLogoHover : backgroundPrimary,
           borderRadius:
               isHovering ? hoveredBorderRadius : unhoveredBorderRadius,
         ),

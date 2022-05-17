@@ -15,7 +15,7 @@ class Channel extends StatelessWidget {
     return Container(
       width: 240,
       decoration: const BoxDecoration(
-        color: grey3,
+        color: backgroundSecondary,
         borderRadius: BorderRadius.only(
           topLeft: kIsWeb ? Radius.circular(0) : Radius.circular(10),
         ),
@@ -29,8 +29,11 @@ class Channel extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('RPL-B Squad',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                const Text(
+                  'RPL-B Squad',
+                  style: TextStyle(
+                      color: headerPrimary, fontWeight: FontWeight.bold),
+                ),
                 IconButton(
                     icon: const Icon(FluentIcons.chevron_down),
                     onPressed: () {})
@@ -53,9 +56,13 @@ class Channel extends StatelessWidget {
                         children: [
                           Row(
                             children: const [
-                              FaIcon(FontAwesomeIcons.chevronDown),
+                              Icon(FluentIcons.chevron_down,
+                                  color: channelsDefault),
                               SizedBox(width: 10),
-                              Text('TEXT CHANNELS')
+                              Text(
+                                'TEXT CHANNELS',
+                                style: TextStyle(color: channelsDefault),
+                              )
                             ],
                           ),
                           IconButton(
@@ -79,9 +86,13 @@ class Channel extends StatelessWidget {
                         children: [
                           Row(
                             children: const [
-                              FaIcon(FontAwesomeIcons.chevronDown),
+                              FaIcon(FontAwesomeIcons.chevronDown,
+                                  color: channelsDefault),
                               SizedBox(width: 10),
-                              Text('VOICE CHANNELS')
+                              Text(
+                                'VOICE CHANNELS',
+                                style: TextStyle(color: channelsDefault),
+                              )
                             ],
                           ),
                           IconButton(
@@ -104,7 +115,7 @@ class Channel extends StatelessWidget {
           Container(
             width: double.maxFinite,
             padding: const EdgeInsets.all(12),
-            color: grey2,
+            color: backgroundSecondaryAlt,
             child: Row(
               children: [
                 const AvatarWithOnlineStatus(
@@ -122,7 +133,10 @@ class Channel extends StatelessWidget {
                         style: TextStyle(fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,
                       ),
-                      Text('#6969'),
+                      Text(
+                        '#6969',
+                        style: TextStyle(color: headerSecondary),
+                      ),
                     ],
                   ),
                 ),
@@ -149,9 +163,16 @@ class Channel extends StatelessWidget {
         children: [
           Row(
             children: [
-              const FaIcon(FontAwesomeIcons.hashtag),
+              const FaIcon(
+                FontAwesomeIcons.hashtag,
+                color: channelsDefault,
+                size: 16,
+              ),
               const SizedBox(width: 10),
-              Text(name),
+              Text(
+                name,
+                style: const TextStyle(color: interactiveActive),
+              ),
             ],
           ),
           Row(
@@ -176,9 +197,16 @@ class Channel extends StatelessWidget {
         children: [
           Row(
             children: [
-              const FaIcon(FontAwesomeIcons.volumeHigh),
+              const FaIcon(
+                FontAwesomeIcons.volumeHigh,
+                color: channelsDefault,
+                size: 16,
+              ),
               const SizedBox(width: 10),
-              Text(name),
+              Text(
+                name,
+                style: const TextStyle(color: channelsDefault),
+              ),
             ],
           ),
         ],
