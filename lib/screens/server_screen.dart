@@ -14,10 +14,10 @@ class ServerScreen extends StatefulWidget {
   const ServerScreen({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<ServerScreen> createState() => _ServerScreenState();
 }
 
-class _MyHomePageState extends State<ServerScreen> with WindowListener {
+class _ServerScreenState extends State<ServerScreen> with WindowListener {
   bool isMemberListHidden = false;
 
   @override
