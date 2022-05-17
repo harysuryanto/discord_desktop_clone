@@ -56,12 +56,18 @@ class Channel extends StatelessWidget {
                         children: [
                           Row(
                             children: const [
-                              Icon(FluentIcons.chevron_down,
-                                  color: channelsDefault),
-                              SizedBox(width: 10),
+                              FaIcon(
+                                FontAwesomeIcons.chevronDown,
+                                color: channelsDefault,
+                                size: 8,
+                              ),
+                              SizedBox(width: 5),
                               Text(
                                 'TEXT CHANNELS',
-                                style: TextStyle(color: channelsDefault),
+                                style: TextStyle(
+                                    color: channelsDefault,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold),
                               )
                             ],
                           ),
@@ -70,7 +76,9 @@ class Channel extends StatelessWidget {
                               onPressed: () {})
                         ],
                       ),
-                      _buildTextChannelItem(name: 'ngobrol-santai'),
+                      _buildTextChannelItem(
+                          name: 'ngobrol-santai 🐌', isActive: true),
+                      _buildTextChannelItem(name: 'ngobrol-rusuh 🔥'),
                     ],
                   ),
                 ),
@@ -86,12 +94,18 @@ class Channel extends StatelessWidget {
                         children: [
                           Row(
                             children: const [
-                              FaIcon(FontAwesomeIcons.chevronDown,
-                                  color: channelsDefault),
-                              SizedBox(width: 10),
+                              FaIcon(
+                                FontAwesomeIcons.chevronDown,
+                                color: channelsDefault,
+                                size: 8,
+                              ),
+                              SizedBox(width: 5),
                               Text(
                                 'VOICE CHANNELS',
-                                style: TextStyle(color: channelsDefault),
+                                style: TextStyle(
+                                    color: channelsDefault,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold),
                               )
                             ],
                           ),
@@ -101,10 +115,9 @@ class Channel extends StatelessWidget {
                         ],
                       ),
                       _buildVoiceChannelItem(name: 'General'),
-                      const SizedBox(height: 10),
                       _buildVoiceChannelItem(name: 'PUBG-Only'),
-                      const SizedBox(height: 10),
-                      _buildVoiceChannelItem(name: 'War Thunder-Only'),
+                      _buildVoiceChannelItem(
+                          name: 'War Thunder-Only', isActive: true),
                     ],
                   ),
                 ),
@@ -122,6 +135,7 @@ class Channel extends StatelessWidget {
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/871388221836251166/04fa62bc9241e82f1587328146d448d7.webp?size=32',
                   username: 'Hary Suryanto',
+                  isOnline: true,
                 ),
                 const SizedBox(width: 10),
                 Expanded(
@@ -130,18 +144,19 @@ class Channel extends StatelessWidget {
                     children: const [
                       Text(
                         'King Jom-Uh',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 14),
                         overflow: TextOverflow.ellipsis,
                       ),
                       Text(
                         '#6969',
-                        style: TextStyle(color: headerSecondary),
+                        style: TextStyle(color: headerSecondary, fontSize: 12),
                       ),
                     ],
                   ),
                 ),
                 IconButton(
-                    icon: const Icon(FluentIcons.mic_off2), onPressed: () {}),
+                    icon: const Icon(FluentIcons.microphone), onPressed: () {}),
                 IconButton(
                     icon: const Icon(FluentIcons.speakers), onPressed: () {}),
                 IconButton(
@@ -154,10 +169,18 @@ class Channel extends StatelessWidget {
     );
   }
 
-  Widget _buildTextChannelItem({Key? key, required String name}) {
-    return Padding(
+  Widget _buildTextChannelItem({
+    Key? key,
+    required String name,
+    bool isActive = false,
+  }) {
+    return Container(
       key: key,
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.only(left: 10),
+      decoration: BoxDecoration(
+        color: isActive ? backgroundPrimary : Colors.transparent,
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -171,7 +194,8 @@ class Channel extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 name,
-                style: const TextStyle(color: interactiveActive),
+                style: TextStyle(
+                    color: isActive ? interactiveActive : channelsDefault),
               ),
             ],
           ),
@@ -188,10 +212,18 @@ class Channel extends StatelessWidget {
     );
   }
 
-  Widget _buildVoiceChannelItem({Key? key, required String name}) {
-    return Padding(
+  Widget _buildVoiceChannelItem({
+    Key? key,
+    required String name,
+    bool isActive = false,
+  }) {
+    return Container(
       key: key,
-      padding: const EdgeInsets.symmetric(horizontal: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: isActive ? backgroundPrimary : Colors.transparent,
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -205,7 +237,8 @@ class Channel extends StatelessWidget {
               const SizedBox(width: 10),
               Text(
                 name,
-                style: const TextStyle(color: channelsDefault),
+                style: TextStyle(
+                    color: isActive ? interactiveActive : channelsDefault),
               ),
             ],
           ),

@@ -25,6 +25,11 @@ class Server extends StatelessWidget {
               serverName: 'RPL-B Squad',
               imageUrl:
                   'https://cdn.discordapp.com/icons/757200769819869226/f3cf101df6b34c91997101438e56c072.webp?size=96'),
+          SizedBox(height: 10),
+          ServerListTile(serverName: 'add', isAnActionButton: true),
+          SizedBox(height: 10),
+          ServerListTile(serverName: 'explore', isAnActionButton: true),
+          SizedBox(height: 10),
         ],
       ),
     );

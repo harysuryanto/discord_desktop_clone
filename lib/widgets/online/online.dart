@@ -4,10 +4,17 @@ import '../../colors.dart';
 import 'online_list_tile.dart';
 
 class Online extends StatelessWidget {
-  const Online({Key? key}) : super(key: key);
+  const Online({
+    Key? key,
+    this.isMemberListHidden = true,
+  }) : super(key: key);
+
+  final bool isMemberListHidden;
 
   @override
   Widget build(BuildContext context) {
+    if (isMemberListHidden) return const SizedBox();
+
     return Container(
       width: 240,
       color: backgroundSecondary,

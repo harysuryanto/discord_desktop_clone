@@ -1,5 +1,4 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:flutter/material.dart' as material;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../colors.dart';
@@ -15,36 +14,6 @@ class Chat extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            /// Top bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              child: Row(
-                children: [
-                  const Text('#'),
-                  const SizedBox(width: 10),
-                  const Text(
-                    'ngobrol-santai',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const Spacer(),
-                  IconButton(
-                      icon: const FaIcon(FontAwesomeIcons.hashtag),
-                      onPressed: () {}),
-                  IconButton(
-                      icon: const FaIcon(FontAwesomeIcons.solidBell),
-                      onPressed: () {}),
-                  IconButton(
-                      icon: const Icon(material.Icons.push_pin),
-                      onPressed: () {}),
-                  IconButton(
-                      icon: const FaIcon(FontAwesomeIcons.userGroup),
-                      onPressed: () {}),
-                ],
-              ),
-            ),
-
-            const Divider(),
-
             /// Chat list
             Expanded(
               child: ListView(
@@ -59,7 +28,7 @@ class Chat extends StatelessWidget {
             /// Text input
             Container(
               margin: const EdgeInsets.only(left: 16, right: 16, bottom: 12),
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: const BoxDecoration(
                 color: channeltextareaBackground,
                 borderRadius: BorderRadius.all(Radius.circular(8)),
@@ -67,25 +36,27 @@ class Chat extends StatelessWidget {
               child: Row(
                 children: [
                   IconButton(
-                      icon: const FaIcon(FontAwesomeIcons.solidCircle),
+                      icon: const Icon(FluentIcons.circle_addition_solid),
                       onPressed: () {}),
                   const Expanded(
                     child: TextBox(
+                      placeholder: 'Message #ngobrol-santai',
+                      placeholderStyle: TextStyle(color: textMuted),
                       decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.zero,
-                        // border: BoxBorder(),
                       ),
+                      foregroundDecoration:
+                          BoxDecoration(shape: BoxShape.circle),
                     ),
                   ),
                   IconButton(
                       icon: const FaIcon(FontAwesomeIcons.gift),
                       onPressed: () {}),
                   IconButton(
-                      icon: const FaIcon(FontAwesomeIcons.textHeight),
-                      onPressed: () {}),
+                      icon: const Icon(FluentIcons.gif), onPressed: () {}),
                   IconButton(
-                      icon: const FaIcon(FontAwesomeIcons.stickerMule),
+                      icon: const Icon(FluentIcons.sticky_notes_solid_app_icon),
                       onPressed: () {}),
                   IconButton(
                       icon: const FaIcon(FontAwesomeIcons.solidFaceLaugh),

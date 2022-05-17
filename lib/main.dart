@@ -41,7 +41,7 @@ void main() async {
         windowButtonVisibility: false,
       );
       // await windowManager.setSize(const Size(755, 545));
-      await windowManager.setMinimumSize(const Size(755, 545));
+      await windowManager.setMinimumSize(const Size(1000, 545));
       await windowManager.show();
       // await windowManager.setPreventClose(false);
       await windowManager.setSkipTaskbar(false);
@@ -62,16 +62,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const ServerScreen(),
       theme: ThemeData(
-        buttonTheme: ButtonThemeData.all(
-          ButtonStyle(
-            textStyle: ButtonState.resolveWith<TextStyle>(
-              (state) => const TextStyle(color: statusOnline),
-            ),
-            foregroundColor: ButtonState.resolveWith<Color>(
-              (state) => interactiveNormal,
-            ),
+        dividerTheme: DividerThemeData(
+          thickness: 1,
+          horizontalMargin: EdgeInsets.zero,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.3),
+                offset: const Offset(0, 0),
+                blurRadius: 0.4,
+                spreadRadius: 0,
+              ),
+            ],
           ),
         ),
+        iconTheme: const IconThemeData(color: interactiveNormal),
         brightness: Brightness.dark,
         accentColor: Colors.purple,
         visualDensity: VisualDensity.standard,
