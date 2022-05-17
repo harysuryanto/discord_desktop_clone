@@ -1,6 +1,6 @@
-import 'server_list_tile.dart';
-
 import 'package:fluent_ui/fluent_ui.dart';
+
+import 'server_list_tile.dart';
 
 class Server extends StatelessWidget {
   const Server({Key? key}) : super(key: key);
