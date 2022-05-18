@@ -13,9 +13,7 @@ class Server extends StatelessWidget {
         controller: ScrollController(),
         padding: const EdgeInsets.all(12),
         children: const [
-          ServerListTile(
-              serverName: 'Home',
-              imageUrl: 'https://i.ibb.co/4sg5gnR/Discord-Logo-White.png'),
+          ServerListTile(serverName: 'Home'),
           SizedBox(height: 10),
           Divider(),
           SizedBox(height: 10),
@@ -26,9 +24,17 @@ class Server extends StatelessWidget {
               imageUrl:
                   'https://cdn.discordapp.com/icons/757200769819869226/f3cf101df6b34c91997101438e56c072.webp?size=96'),
           SizedBox(height: 10),
-          ServerListTile(serverName: 'add', isAnActionButton: true),
+          ServerListTile(
+            serverName: 'Add',
+            isAnActionButton: true,
+            tooltipMessage: 'Add a Server',
+          ),
           SizedBox(height: 10),
-          ServerListTile(serverName: 'explore', isAnActionButton: true),
+          ServerListTile(
+            serverName: 'Explore',
+            isAnActionButton: true,
+            tooltipMessage: 'Explore Public Servers',
+          ),
           SizedBox(height: 10),
         ],
       ),
