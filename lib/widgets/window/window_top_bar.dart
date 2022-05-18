@@ -2,6 +2,7 @@ import 'package:bitsdojo_window_flutter3/bitsdojo_window.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:window_manager/window_manager.dart';
 
+import '../../colors.dart';
 import 'window_button.dart';
 
 class WindowTopBar extends StatelessWidget {
@@ -23,7 +24,10 @@ class WindowTopBar extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: Text(
                   appTitle,
-                  style: const TextStyle(fontSize: 12),
+                  style: const TextStyle(
+                      color: textMuted,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900),
                 ),
               ),
             ),
