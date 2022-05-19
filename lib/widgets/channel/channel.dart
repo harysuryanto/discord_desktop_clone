@@ -77,8 +77,8 @@ class Channel extends StatelessWidget {
                         ],
                       ),
                       _buildTextChannelItem(
-                          name: 'ngobrol-santai 🐌', isActive: true),
-                      _buildTextChannelItem(name: 'ngobrol-rusuh 🔥'),
+                          name: 'ngobrol-santai', isActive: true),
+                      _buildTextChannelItem(name: 'rules 📜'),
                     ],
                   ),
                 ),
@@ -116,8 +116,7 @@ class Channel extends StatelessWidget {
                       ),
                       _buildVoiceChannelItem(name: 'General'),
                       _buildVoiceChannelItem(name: 'PUBG-Only'),
-                      _buildVoiceChannelItem(
-                          name: 'War Thunder-Only', isActive: true),
+                      _buildVoiceChannelItem(name: 'War Thunder-Only'),
                     ],
                   ),
                 ),
