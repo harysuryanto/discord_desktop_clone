@@ -92,12 +92,9 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
               children: [
                 const Expanded(
                   child: TextBox(
-                    placeholder: 'Search',
                     suffix: Icon(FluentIcons.search),
+                    placeholder: 'Search',
                     decoration: BoxDecoration(color: backgroundTertiary),
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-                    textAlignVertical: TextAlignVertical.center,
-                    foregroundDecoration: BoxDecoration(shape: BoxShape.circle),
                   ),
                 ),
                 const SizedBox(width: 10),

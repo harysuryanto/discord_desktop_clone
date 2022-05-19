@@ -46,8 +46,6 @@ class Chat extends StatelessWidget {
                         color: Colors.transparent,
                         borderRadius: BorderRadius.zero,
                       ),
-                      foregroundDecoration:
-                          BoxDecoration(shape: BoxShape.circle),
                     ),
                   ),
                   IconButton(
