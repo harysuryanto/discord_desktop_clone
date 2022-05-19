@@ -10,12 +10,14 @@ class ServerListTile extends StatefulWidget {
     this.imageUrl,
     this.isAnActionButton = false,
     this.tooltipMessage,
+    this.isActive = false,
   }) : super(key: key);
 
   final String serverName;
   final String? imageUrl;
   final bool isAnActionButton;
   final String? tooltipMessage;
+  final bool isActive;
 
   @override
   State<ServerListTile> createState() => _ServerListTileState();
@@ -30,9 +32,12 @@ class _ServerListTileState extends State<ServerListTile> {
     final Widget text = Builder(builder: ((context) {
       if (!widget.isAnActionButton) {
         if (widget.serverName == 'Home') {
-          return Image.network(
-            'https://i.ibb.co/4sg5gnR/Discord-Logo-White.png',
-            width: 24,
+          return Opacity(
+            opacity: 0.8,
+            child: Image.network(
+              'https://i.ibb.co/4sg5gnR/Discord-Logo-White.png',
+              width: 24,
+            ),
           );
         }
 
@@ -50,7 +55,7 @@ class _ServerListTileState extends State<ServerListTile> {
       if (widget.serverName == 'Add') {
         return Icon(
           FontAwesomeIcons.plus,
-          size: 20,
+          size: 24,
           color: isHovering ? Colors.white : textColor,
         );
       }
@@ -58,14 +63,14 @@ class _ServerListTileState extends State<ServerListTile> {
       if (widget.serverName == 'Explore') {
         return Icon(
           FluentIcons.compass_n_w,
-          size: 20,
+          size: 24,
           color: isHovering ? Colors.white : textColor,
         );
       }
 
       return FaIcon(
         FontAwesomeIcons.solidCircleQuestion,
-        size: 20,
+        size: 24,
         color: isHovering ? Colors.white : textColor,
       );
     }));
@@ -110,23 +115,49 @@ class _ServerListTileState extends State<ServerListTile> {
   }) {
     final BorderRadius unhoveredBorderRadius = BorderRadius.circular(50);
     final BorderRadius hoveredBorderRadius = BorderRadius.circular(15);
-    final Color backgroundColor =
-        widget.isAnActionButton ? statusOnline : serverLogoHover;
+    final BorderRadius borderRadius = isHovering || widget.isActive
+        ? hoveredBorderRadius
+        : unhoveredBorderRadius;
 
-    return AspectRatio(
-      aspectRatio: 1,
-      child: AnimatedContainer(
-        key: ValueKey('AnimatedController ${widget.serverName}'),
-        alignment: Alignment.center,
-        clipBehavior: Clip.hardEdge,
-        duration: const Duration(milliseconds: 300),
-        decoration: BoxDecoration(
-          color: isHovering ? backgroundColor : backgroundPrimary,
-          borderRadius:
-              isHovering ? hoveredBorderRadius : unhoveredBorderRadius,
+    final Color backgroundColorType =
+        widget.isAnActionButton ? statusOnline : serverLogoHover;
+    final Color backgroundColor = widget.imageUrl == null
+        ? isHovering || widget.isActive
+            ? backgroundColorType
+            : backgroundPrimary
+        : Colors.transparent;
+
+    return Stack(
+      children: [
+        AnimatedContainer(
+          key: ValueKey('AnimatedController ${widget.serverName}'),
+          width: 48,
+          height: 48,
+          margin: const EdgeInsets.symmetric(horizontal: 12),
+          alignment: Alignment.center,
+          clipBehavior: Clip.antiAlias,
+          duration: const Duration(milliseconds: 300),
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: borderRadius,
+          ),
+          child: child,
         ),
-        child: child,
-      ),
+        if (widget.isActive)
+          Positioned(
+            top: 3,
+            bottom: 3,
+            left: -4,
+            child: Container(
+              width: 8,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius:
+                    BorderRadius.horizontal(right: Radius.circular(4)),
+              ),
+            ),
+          ),
+      ],
     );
   }
 }

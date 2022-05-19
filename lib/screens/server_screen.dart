@@ -1,9 +1,9 @@
-import 'package:discord_desktop_clone/colors.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/material.dart' as material;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:window_manager/window_manager.dart';
 
+import '../colors.dart';
 import '../widgets/channel/channel.dart';
 import '../widgets/chat/chat.dart';
 import '../widgets/online/online.dart';
@@ -69,11 +69,17 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
         children: [
           const FaIcon(FontAwesomeIcons.hashtag, size: 18),
           const SizedBox(width: 10),
-          const Text(
-            'ngobrol-santai',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          const Expanded(
+            child: Text(
+              'ngobrol-santai',
+              softWrap: false,
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  overflow: TextOverflow.fade,
+                  color: interactiveActive),
+            ),
           ),
-          const Spacer(),
           IconButton(
               icon: const FaIcon(FontAwesomeIcons.hashtag), onPressed: () {}),
           IconButton(

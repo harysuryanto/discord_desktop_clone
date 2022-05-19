@@ -27,7 +27,7 @@ class Chat extends StatelessWidget {
 
             /// Text input
             Container(
-              margin: const EdgeInsets.only(left: 16, right: 16, bottom: 12),
+              margin: const EdgeInsets.only(left: 16, right: 16, bottom: 24),
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: const BoxDecoration(
                 color: channeltextareaBackground,
