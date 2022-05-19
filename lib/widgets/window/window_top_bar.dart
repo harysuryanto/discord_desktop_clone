@@ -12,28 +12,35 @@ class WindowTopBar extends StatelessWidget {
   }) : super(key: key);
 
   final String appTitle;
+  final double _windowTitleBarHeight = 22;
 
   @override
   Widget build(BuildContext context) {
-    return WindowTitleBarBox(
-      child: Row(
-        children: [
-          Expanded(
-            child: DragToMoveArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Text(
-                  appTitle,
-                  style: const TextStyle(
-                      color: textMuted,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w900),
+    return SizedBox(
+      height: _windowTitleBarHeight,
+      child: WindowTitleBarBox(
+        child: Row(
+          children: [
+            Expanded(
+              child: DragToMoveArea(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      appTitle,
+                      style: const TextStyle(
+                          color: textMuted,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-          const WindowButtons(),
-        ],
+            const WindowButtons(),
+          ],
+        ),
       ),
     );
   }
