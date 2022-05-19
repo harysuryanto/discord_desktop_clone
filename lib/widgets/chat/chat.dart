@@ -20,7 +20,7 @@ class Chat extends StatelessWidget {
                 controller: ScrollController(),
                 padding: const EdgeInsets.all(16),
                 children: const [
-                  Text('chat'),
+                  Text('In progress... 🚧'),
                 ],
               ),
             ),
