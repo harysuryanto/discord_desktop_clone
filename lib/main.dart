@@ -1,6 +1,5 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_acrylic/flutter_acrylic.dart' as flutter_acrylic;
 import 'package:system_theme/system_theme.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:window_manager/window_manager.dart';
@@ -33,19 +32,15 @@ void main() async {
   setPathUrlStrategy();
 
   if (isDesktop) {
-    await flutter_acrylic.Window.initialize();
     await WindowManager.instance.ensureInitialized();
-    windowManager.waitUntilReadyToShow().then((_) async {
-      await windowManager.setTitleBarStyle(
-        TitleBarStyle.hidden,
-        windowButtonVisibility: false,
-      );
-      // await windowManager.setSize(const Size(755, 545));
-      await windowManager.setMinimumSize(const Size(1000, 545));
-      await windowManager.show();
-      // await windowManager.setPreventClose(false);
-      await windowManager.setSkipTaskbar(false);
-    });
+
+    WindowOptions windowOptions = WindowOptions(
+      title: appTitle,
+      titleBarStyle: TitleBarStyle.hidden,
+      // size: const Size(940, 500),
+      minimumSize: const Size(940, 500),
+    );
+    windowManager.waitUntilReadyToShow(windowOptions, () async {});
   }
 
   runApp(const MyApp());
@@ -62,6 +57,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const ServerScreen(),
       theme: ThemeData(
+        brightness: Brightness.dark,
+        accentColor: Colors.purple,
+        visualDensity: VisualDensity.standard,
+        iconTheme: const IconThemeData(color: interactiveNormal),
+        focusTheme: FocusThemeData(
+          glowFactor: is10footScreen() ? 2.0 : 0.0,
+        ),
         dividerTheme: DividerThemeData(
           thickness: 1,
           horizontalMargin: EdgeInsets.zero,
@@ -75,13 +77,6 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        iconTheme: const IconThemeData(color: interactiveNormal),
-        brightness: Brightness.dark,
-        accentColor: Colors.purple,
-        visualDensity: VisualDensity.standard,
-        focusTheme: FocusThemeData(
-          glowFactor: is10footScreen() ? 2.0 : 0.0,
         ),
       ),
       builder: (BuildContext context, Widget? child) {
