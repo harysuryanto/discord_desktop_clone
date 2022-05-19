@@ -45,7 +45,7 @@ class _ServerListTileState extends State<ServerListTile> {
           widget.serverName.substring(0, 1),
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: isHovering ? Colors.white : textColor,
+            color: isHovering ? interactiveActive : textColor,
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
@@ -56,7 +56,7 @@ class _ServerListTileState extends State<ServerListTile> {
         return Icon(
           FontAwesomeIcons.plus,
           size: 24,
-          color: isHovering ? Colors.white : textColor,
+          color: isHovering ? interactiveActive : textColor,
         );
       }
 
@@ -64,14 +64,14 @@ class _ServerListTileState extends State<ServerListTile> {
         return Icon(
           FluentIcons.compass_n_w,
           size: 24,
-          color: isHovering ? Colors.white : textColor,
+          color: isHovering ? interactiveActive : textColor,
         );
       }
 
       return FaIcon(
         FontAwesomeIcons.solidCircleQuestion,
         size: 24,
-        color: isHovering ? Colors.white : textColor,
+        color: isHovering ? interactiveActive : textColor,
       );
     }));
 
@@ -129,6 +129,7 @@ class _ServerListTileState extends State<ServerListTile> {
 
     return Stack(
       children: [
+        // Server logo
         AnimatedContainer(
           key: ValueKey('AnimatedController ${widget.serverName}'),
           width: 48,
@@ -143,6 +144,8 @@ class _ServerListTileState extends State<ServerListTile> {
           ),
           child: child,
         ),
+
+        // Active indicator
         if (widget.isActive)
           Positioned(
             top: 3,
@@ -151,7 +154,24 @@ class _ServerListTileState extends State<ServerListTile> {
             child: Container(
               width: 8,
               decoration: const BoxDecoration(
-                color: Colors.white,
+                color: interactiveActive,
+                borderRadius:
+                    BorderRadius.horizontal(right: Radius.circular(4)),
+              ),
+            ),
+          ),
+
+        // Hover indicator
+        if (!widget.isActive)
+          Positioned(
+            top: 14,
+            bottom: 14,
+            left: -4,
+            child: AnimatedContainer(
+              width: isHovering ? 8 : 0,
+              duration: const Duration(milliseconds: 200),
+              decoration: const BoxDecoration(
+                color: interactiveActive,
                 borderRadius:
                     BorderRadius.horizontal(right: Radius.circular(4)),
               ),
