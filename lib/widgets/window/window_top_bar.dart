@@ -1,5 +1,6 @@
 import 'package:bitsdojo_window_flutter3/bitsdojo_window.dart';
 import 'package:fluent_ui/fluent_ui.dart';
+import 'package:flutter/foundation.dart';
 import 'package:window_manager/window_manager.dart';
 
 import '../../colors.dart';
@@ -12,10 +13,14 @@ class WindowTopBar extends StatelessWidget {
   }) : super(key: key);
 
   final String appTitle;
-  final double _windowTitleBarHeight = 22;
+  final double _windowTitleBarHeight = 22; // Size from Discord
 
   @override
   Widget build(BuildContext context) {
+    if (kIsWeb) {
+      return const SizedBox();
+    }
+
     return SizedBox(
       height: _windowTitleBarHeight,
       child: WindowTitleBarBox(
