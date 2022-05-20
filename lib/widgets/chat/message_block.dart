@@ -86,14 +86,13 @@ class MessageBlock extends StatelessWidget {
         children: [
           Container(
             width: 2,
-            color: infoWarningForeground, // TODO: ambil warna
+            color: infoWarningForeground,
           ),
           Expanded(
             child: Opacity(
               opacity: 0.15,
               child: Container(
-                width: 2,
-                color: infoWarningForeground, // TODO: ambil warna
+                color: infoWarningForeground,
               ),
             ),
           ),
