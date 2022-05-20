@@ -26,17 +26,18 @@ class _ClickToCopy extends State<ClickToCopy> {
   Widget build(BuildContext context) {
     return MouseRegion(
       onEnter: (event) => setState(() => isTooltipHovered = true),
-      onExit: (event) => setState(() {
-        isTooltipClicked = false;
-        isTooltipHovered = false;
-      }),
+      onExit: (event) {
+        if (!isTooltipClicked) {
+          setState(() => isTooltipHovered = false);
+        }
+      },
       child: GestureDetector(
         child: Container(
           color: Colors.transparent,
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              if (isTooltipHovered)
+              if (isTooltipHovered || isTooltipClicked)
                 Positioned(
                   top: -45,
                   left: -60,
@@ -48,14 +49,15 @@ class _ClickToCopy extends State<ClickToCopy> {
           ),
         ),
         onTap: () {
+          Clipboard.setData(ClipboardData(text: widget.textToCopy));
+
           setState(() => isTooltipClicked = true);
-          Future.delayed(const Duration(seconds: 2)).then((_) {
+          Future.delayed(const Duration(seconds: 1)).then((_) {
             setState(() {
               isTooltipClicked = false;
               isTooltipHovered = false;
             });
           });
-          Clipboard.setData(ClipboardData(text: widget.textToCopy));
         },
       ),
     );
