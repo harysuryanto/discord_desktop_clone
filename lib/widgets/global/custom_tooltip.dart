@@ -1,6 +1,7 @@
-import 'package:discord_desktop_clone/utils/colors.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/services.dart';
+
+import '../../utils/colors.dart';
 
 class ClickToCopy extends StatefulWidget {
   const ClickToCopy({
