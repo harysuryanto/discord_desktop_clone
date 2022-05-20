@@ -1,8 +1,8 @@
-import 'package:discord_desktop_clone/widgets/channel/custom_tooltip.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
 import '../../utils/colors.dart';
 import '../global/avatar_with_online_status.dart';
+import '../global/custom_tooltip.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({
