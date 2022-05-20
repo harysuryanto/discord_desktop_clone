@@ -87,7 +87,10 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
           IconButton(
               icon: const Icon(material.Icons.push_pin), onPressed: () {}),
           IconButton(
-              icon: const FaIcon(FontAwesomeIcons.userGroup),
+              icon: FaIcon(
+                FontAwesomeIcons.userGroup,
+                color: isMemberListHidden ? null : interactiveActive,
+              ),
               onPressed: () {
                 setState(() => isMemberListHidden = !isMemberListHidden);
               }),
