@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../utils/colors.dart';
-import '../global/avatar_with_online_status.dart';
+import 'bottom_bar.dart';
 
 class Channel extends StatelessWidget {
   const Channel({
@@ -124,45 +124,7 @@ class Channel extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: double.maxFinite,
-            padding: const EdgeInsets.all(12),
-            color: backgroundSecondaryAlt,
-            child: Row(
-              children: [
-                const AvatarWithOnlineStatus(
-                  imageUrl:
-                      'https://cdn.discordapp.com/avatars/871388221836251166/04fa62bc9241e82f1587328146d448d7.webp?size=32',
-                  username: 'Hary Suryanto',
-                  isOnline: true,
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        'King Jom-Uh',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 14),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      Text(
-                        '#6969',
-                        style: TextStyle(color: headerSecondary, fontSize: 12),
-                      ),
-                    ],
-                  ),
-                ),
-                IconButton(
-                    icon: const Icon(FluentIcons.microphone), onPressed: () {}),
-                IconButton(
-                    icon: const Icon(FluentIcons.speakers), onPressed: () {}),
-                IconButton(
-                    icon: const Icon(FluentIcons.settings), onPressed: () {}),
-              ],
-            ),
-          )
+          const BottomBar()
         ],
       ),
     );

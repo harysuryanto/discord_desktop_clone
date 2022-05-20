@@ -78,6 +78,20 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
+        tooltipTheme: const TooltipThemeData(
+          waitDuration: Duration(milliseconds: 0),
+          margin: EdgeInsets.symmetric(horizontal: 14),
+          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(6)),
+            color: backgroundTertiary,
+          ),
+          textStyle: TextStyle(
+            fontSize: 14,
+            color: textNormal,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       builder: (BuildContext context, Widget? child) {
         return Container(
