@@ -4,5 +4,5 @@ Discord clone using Flutter for Windows and web. [Try this out!](https://discord
 
 # ✔ TODO
 - [ ] Add splash screen
-- [ ] Add chat section
-- [ ] Make responsive layout
+- [x] Add chat section
+- [x] Make responsive layout
