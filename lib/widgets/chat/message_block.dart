@@ -23,58 +23,60 @@ class MessageBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        if (isMentionedMe) _buildMentionIndicator(),
-        Positioned(
-          child: Container(
-            margin: const EdgeInsets.symmetric(vertical: 8),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-            child: Row(
-              children: [
-                AvatarWithOnlineStatus(
-                  username: username,
-                  width: 40,
-                  height: 40,
-                  imageUrl: imageUrl,
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            username,
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: isAdmin ? adminName : interactiveActive,
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Text(
-                            date,
-                            style: const TextStyle(
-                              color: interactiveNormal,
-                              fontSize: 10,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 0),
-                      Text(
-                        message,
-                        style: const TextStyle(color: interactiveNormal),
-                      ),
-                    ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Stack(
+        children: [
+          if (isMentionedMe) _buildMentionIndicator(),
+          Positioned(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              child: Row(
+                children: [
+                  AvatarWithOnlineStatus(
+                    username: username,
+                    width: 40,
+                    height: 40,
+                    imageUrl: imageUrl,
                   ),
-                ),
-              ],
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              username,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: isAdmin ? adminName : interactiveActive,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              date,
+                              style: const TextStyle(
+                                color: interactiveNormal,
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 0),
+                        Text(
+                          message,
+                          style: const TextStyle(color: interactiveNormal),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
