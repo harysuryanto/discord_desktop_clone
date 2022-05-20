@@ -4,6 +4,8 @@ const backgroundPrimary = Color.fromRGBO(54, 57, 63, 1);
 const backgroundSecondary = Color.fromRGBO(47, 49, 54, 1);
 const backgroundSecondaryAlt = Color.fromRGBO(41, 43, 47, 1);
 const backgroundTertiary = Color.fromRGBO(32, 34, 37, 1);
+const bodyModifierAccent = Color.fromRGBO(79, 84, 92, 1);
+const infoWarningForeground = Color.fromARGB(255, 253, 170, 36);
 
 const statusOnline = Color.fromRGBO(59, 165, 93, 1);
 const adminName = Color.fromRGBO(23, 172, 134, 1);
