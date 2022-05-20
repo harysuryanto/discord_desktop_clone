@@ -1,4 +1,3 @@
-import 'package:bitsdojo_window_flutter3/bitsdojo_window.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:window_manager/window_manager.dart';
@@ -23,29 +22,27 @@ class WindowTopBar extends StatelessWidget {
 
     return SizedBox(
       height: _windowTitleBarHeight,
-      child: WindowTitleBarBox(
-        child: Row(
-          children: [
-            Expanded(
-              child: DragToMoveArea(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      appTitle,
-                      style: const TextStyle(
-                          color: textMuted,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w900),
-                    ),
+      child: Row(
+        children: [
+          Expanded(
+            child: DragToMoveArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    appTitle,
+                    style: const TextStyle(
+                        color: textMuted,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w900),
                   ),
                 ),
               ),
             ),
-            const WindowButtons(),
-          ],
-        ),
+          ),
+          const WindowButtons(),
+        ],
       ),
     );
   }
