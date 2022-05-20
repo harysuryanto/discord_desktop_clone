@@ -1,20 +1,25 @@
 import 'package:fluent_ui/fluent_ui.dart';
 
 import '../../utils/colors.dart';
+import '../../utils/screen_width_breakpoints.dart';
 import 'online_list_tile.dart';
 
 class Online extends StatelessWidget {
-  const Online({
-    Key? key,
-    this.isMemberListHidden = true,
-  }) : super(key: key);
-
-  final bool isMemberListHidden;
+  const Online({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if (isMemberListHidden) return const SizedBox();
+    double screenWidth = MediaQuery.of(context).size.width;
+    bool isTabletOrSmaller = screenWidth < laptopWidth;
 
+    if (isTabletOrSmaller) {
+      return Expanded(child: _buildContent());
+    }
+
+    return _buildContent();
+  }
+
+  Container _buildContent() {
     return Container(
       width: 240,
       color: backgroundSecondary,

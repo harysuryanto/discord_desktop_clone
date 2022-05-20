@@ -1,9 +1,9 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:flutter/material.dart' as material;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:window_manager/window_manager.dart';
 
 import '../utils/colors.dart';
+import '../utils/screen_width_breakpoints.dart';
 import '../widgets/channel/channel.dart';
 import '../widgets/chat/chat.dart';
 import '../widgets/online/online.dart';
@@ -34,9 +34,11 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    bool isTabletOrSmaller = screenWidth < laptopWidth;
+
     return WindowWrapper(
       content: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Server(),
           const Channel(),
@@ -48,8 +50,15 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
                 Expanded(
                   child: Row(
                     children: [
-                      const Chat(),
-                      Online(isMemberListHidden: isMemberListHidden),
+                      Visibility(
+                        visible: !isTabletOrSmaller ||
+                            (isTabletOrSmaller && isMemberListHidden),
+                        child: const Chat(key: ValueKey('Chat')),
+                      ),
+                      Visibility(
+                        visible: !isMemberListHidden,
+                        child: const Online(key: ValueKey('Online')),
+                      ),
                     ],
                   ),
                 ),
@@ -81,11 +90,11 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
             ),
           ),
           IconButton(
-              icon: const FaIcon(FontAwesomeIcons.hashtag), onPressed: () {}),
+              icon: const Icon(FontAwesomeIcons.hashtag), onPressed: () {}),
           IconButton(
-              icon: const FaIcon(FontAwesomeIcons.solidBell), onPressed: () {}),
+              icon: const Icon(FontAwesomeIcons.solidBell), onPressed: () {}),
           IconButton(
-              icon: const Icon(material.Icons.push_pin), onPressed: () {}),
+              icon: const Icon(FontAwesomeIcons.mapPin), onPressed: () {}),
           IconButton(
               icon: FaIcon(
                 FontAwesomeIcons.userGroup,
