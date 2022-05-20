@@ -1,7 +1,7 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../colors.dart';
+import '../../utils/colors.dart';
 
 class ServerListTile extends StatefulWidget {
   const ServerListTile({

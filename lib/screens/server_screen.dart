@@ -3,7 +3,7 @@ import 'package:flutter/material.dart' as material;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:window_manager/window_manager.dart';
 
-import '../colors.dart';
+import '../utils/colors.dart';
 import '../widgets/channel/channel.dart';
 import '../widgets/chat/chat.dart';
 import '../widgets/online/online.dart';

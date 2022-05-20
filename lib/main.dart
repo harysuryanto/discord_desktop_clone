@@ -4,8 +4,8 @@ import 'package:system_theme/system_theme.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:window_manager/window_manager.dart';
 
-import 'colors.dart';
 import 'screens/server_screen.dart';
+import 'utils/colors.dart';
 
 const String appTitle = 'Discord';
 

@@ -2,7 +2,7 @@ import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../colors.dart';
+import '../../utils/colors.dart';
 import '../global/avatar_with_online_status.dart';
 
 class Channel extends StatelessWidget {

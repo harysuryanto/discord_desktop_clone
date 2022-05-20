@@ -1,4 +1,4 @@
-import '../../colors.dart';
+import '../../utils/colors.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 
 import '../global/avatar_with_online_status.dart';

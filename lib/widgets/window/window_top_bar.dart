@@ -2,7 +2,7 @@ import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:window_manager/window_manager.dart';
 
-import '../../colors.dart';
+import '../../utils/colors.dart';
 import 'window_button.dart';
 
 class WindowTopBar extends StatelessWidget {
