@@ -7,7 +7,7 @@ import 'package:window_manager/window_manager.dart';
 import 'screens/server_screen.dart';
 import 'utils/colors.dart';
 
-const String appTitle = 'Discord';
+const String appTitle = 'ngobrol-santai';
 
 /// Checks if the current environment is a desktop environment.
 bool get isDesktop {
