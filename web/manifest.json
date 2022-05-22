@@ -1,11 +1,11 @@
 {
-    "name": "discord_desktop_clone",
-    "short_name": "discord_desktop_clone",
+    "name": "Discord Clone",
+    "short_name": "Discord Clone",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#2f3136",
+    "theme_color": "#2f3136",
+    "description": "Discord clone using Flutter.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
