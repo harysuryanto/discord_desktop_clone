@@ -82,6 +82,8 @@
   </div>
   <script>
     window.addEventListener('load', function(ev) {
+      const content = document.querySelector(".content");
+
       console.log("⏳ Loading entrypoint...");
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -93,6 +95,7 @@
         return engineInitializer.initializeEngine();
       }).then(function(appRunner) {
         console.log("🚀 Running app...");
+        content.remove();
         return appRunner.runApp();
       });
     });
