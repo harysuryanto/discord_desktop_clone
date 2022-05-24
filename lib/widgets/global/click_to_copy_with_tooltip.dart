@@ -4,8 +4,8 @@ import 'package:flutter/services.dart';
 import '../../utils/colors.dart';
 import 'widget_size.dart';
 
-class ClickToCopy extends StatefulWidget {
-  const ClickToCopy({
+class ClickToCopyWithTooltip extends StatefulWidget {
+  const ClickToCopyWithTooltip({
     Key? key,
     required this.child,
     this.textToCopy,
@@ -17,10 +17,10 @@ class ClickToCopy extends StatefulWidget {
   final String? description;
 
   @override
-  State<ClickToCopy> createState() => _ClickToCopy();
+  State<ClickToCopyWithTooltip> createState() => _ClickToCopyWithTooltip();
 }
 
-class _ClickToCopy extends State<ClickToCopy> {
+class _ClickToCopyWithTooltip extends State<ClickToCopyWithTooltip> {
   bool isTooltipClicked = false;
   bool isTooltipHovered = false;
   Size? childSize;

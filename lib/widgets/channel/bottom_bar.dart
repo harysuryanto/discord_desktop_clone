@@ -2,7 +2,7 @@ import 'package:fluent_ui/fluent_ui.dart';
 
 import '../../utils/colors.dart';
 import '../global/avatar_with_online_status.dart';
-import '../global/custom_tooltip.dart';
+import '../global/click_to_copy_with_tooltip.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({
