@@ -30,14 +30,14 @@ class _BottomBarState extends State<BottomBar> {
           ),
           const SizedBox(width: 10),
           Expanded(
-            child: ClickToCopy(
-              textToCopy: 'King Jom-Uh#6969',
+            child: ClickToCopyWithTooltip(
+              textToCopy: 'King Jom-Uy#6969',
               description: 'Click to copy username',
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Text(
-                    'King Jom-Uh',
+                    'King Jom-Uy',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                     overflow: TextOverflow.ellipsis,
                   ),
