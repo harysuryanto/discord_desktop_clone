@@ -36,6 +36,13 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     bool isTabletOrSmaller = screenWidth < laptopWidth;
+    bool isMobileScreen = screenWidth < tabletWidth;
+
+    if (isMobileScreen) {
+      return const Center(
+        child: Text('Please run on a tablet or larger screen'),
+      );
+    }
 
     return WindowWrapper(
       content: Row(
