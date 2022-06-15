@@ -31,21 +31,25 @@ class OnlineListTile extends StatelessWidget {
             isOnline: isOnline,
           ),
           const SizedBox(width: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                username,
-                style: TextStyle(
-                    color: isAdmin ? adminName : channelsDefault,
-                    fontWeight: FontWeight.w600),
-              ),
-              if (isOnline && activity != null)
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 Text(
-                  activity!,
-                  style: const TextStyle(fontSize: 11, color: channelsDefault),
+                  username,
+                  style: TextStyle(
+                      color: isAdmin ? adminName : channelsDefault,
+                      fontWeight: FontWeight.w600),
                 ),
-            ],
+                if (isOnline && activity != null)
+                  Text(
+                    activity!,
+                    overflow: TextOverflow.ellipsis,
+                    style:
+                        const TextStyle(fontSize: 11, color: channelsDefault),
+                  ),
+              ],
+            ),
           )
         ],
       ),

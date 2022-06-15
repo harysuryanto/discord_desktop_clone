@@ -13,7 +13,7 @@ class Channel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 240,
+      width: 220,
       decoration: const BoxDecoration(
         color: backgroundSecondary,
         borderRadius: BorderRadius.only(
@@ -145,20 +145,25 @@ class Channel extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            children: [
-              const FaIcon(
-                FontAwesomeIcons.hashtag,
-                color: channelsDefault,
-                size: 16,
-              ),
-              const SizedBox(width: 10),
-              Text(
-                name,
-                style: TextStyle(
-                    color: isActive ? interactiveActive : channelsDefault),
-              ),
-            ],
+          Expanded(
+            child: Row(
+              children: [
+                const FaIcon(
+                  FontAwesomeIcons.hashtag,
+                  color: channelsDefault,
+                  size: 16,
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    name,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: isActive ? interactiveActive : channelsDefault),
+                  ),
+                ),
+              ],
+            ),
           ),
           Row(
             children: [
