@@ -11,20 +11,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # bitsdojo_window: ^0.1.1+1
+  bitsdojo_window: ^0.1.2
   fluent_ui: ^3.12.0
   font_awesome_flutter: ^10.1.0
   system_theme: ^2.0.0
   url_launcher: ^6.1.0
   url_strategy: ^0.2.0
   window_manager: ^0.2.3
-
-  # Temporary, remove if the bug from bitsdojo_window is fixed
-  bitsdojo_window_flutter3:
-    git:
-      url: https://github.com/aryan-more/bitsdojo_window.git
-      ref: master
-
 
 dev_dependencies:
   flutter_test:
