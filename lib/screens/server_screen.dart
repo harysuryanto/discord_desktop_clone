@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:window_manager/window_manager.dart';
 
 import '../utils/colors.dart';
-import '../utils/screen_width_breakpoints.dart';
 import '../widgets/channel/channel.dart';
 import '../widgets/chat/chat.dart';
 import '../widgets/online/online.dart';
@@ -35,13 +34,13 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    bool isTabletOrSmaller = screenWidth < laptopWidth;
-    bool isMobileScreen = screenWidth < tabletWidth;
+    bool isScreenWidthLessThan750 = screenWidth < 750;
 
     return WindowWrapper(
-      content: isMobileScreen
+      content: isScreenWidthLessThan750
           ? const Center(
-              child: Text('Please run on a tablet or larger screen'),
+              child: SelectableText(
+                  'This app is not optimized for small screen. Please use a computer or laptop for the best experience. Device with screen wider than 750 pixel is mandatory.'),
             )
           : Row(
               children: [
@@ -55,11 +54,7 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
                       Expanded(
                         child: Row(
                           children: [
-                            Visibility(
-                              visible: !isTabletOrSmaller ||
-                                  (isTabletOrSmaller && isMemberListHidden),
-                              child: const Chat(key: ValueKey('Chat')),
-                            ),
+                            const Chat(key: ValueKey('Chat')),
                             Visibility(
                               visible: !isMemberListHidden,
                               child: const Online(key: ValueKey('Online')),
