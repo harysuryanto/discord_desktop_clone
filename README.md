@@ -10,7 +10,9 @@ Discord clone using Flutter for Windows and web.
 # 🚀 Try it out!
 
 - EXE file  
-  Download the [exe](https://github.com/harysuryanto/discord_desktop_clone/files/8790056/discord_desktop_clone-v1.0.zip) file for Windows.
+  Download the [exe](https://github.com/harysuryanto/discord_desktop_clone/files/8907212/discord_desktop_clone.zip) file for Windows.
+  
+  
 - Website  
   Or try out the [web](https://discord-flutter.netlify.app) version.
 
