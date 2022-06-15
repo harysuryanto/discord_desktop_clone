@@ -38,42 +38,40 @@ class _ServerScreenState extends State<ServerScreen> with WindowListener {
     bool isTabletOrSmaller = screenWidth < laptopWidth;
     bool isMobileScreen = screenWidth < tabletWidth;
 
-    if (isMobileScreen) {
-      return const Center(
-        child: Text('Please run on a tablet or larger screen'),
-      );
-    }
-
     return WindowWrapper(
-      content: Row(
-        children: [
-          const Server(),
-          const Channel(),
-          Expanded(
-            child: Column(
+      content: isMobileScreen
+          ? const Center(
+              child: Text('Please run on a tablet or larger screen'),
+            )
+          : Row(
               children: [
-                _buildTopBar(),
-                const Divider(),
+                const Server(),
+                const Channel(),
                 Expanded(
-                  child: Row(
+                  child: Column(
                     children: [
-                      Visibility(
-                        visible: !isTabletOrSmaller ||
-                            (isTabletOrSmaller && isMemberListHidden),
-                        child: const Chat(key: ValueKey('Chat')),
-                      ),
-                      Visibility(
-                        visible: !isMemberListHidden,
-                        child: const Online(key: ValueKey('Online')),
+                      _buildTopBar(),
+                      const Divider(),
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Visibility(
+                              visible: !isTabletOrSmaller ||
+                                  (isTabletOrSmaller && isMemberListHidden),
+                              child: const Chat(key: ValueKey('Chat')),
+                            ),
+                            Visibility(
+                              visible: !isMemberListHidden,
+                              child: const Online(key: ValueKey('Online')),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
-                ),
+                )
               ],
             ),
-          )
-        ],
-      ),
     );
   }
 
