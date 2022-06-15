@@ -43,7 +43,7 @@ class Online extends StatelessWidget {
                 OnlineListTile(
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                  username: 'Dicka',
+                  username: 'Muhidin',
                   activity: '🎣 Mancing',
                 ),
                 SizedBox(height: 10),
@@ -57,7 +57,7 @@ class Online extends StatelessWidget {
                 OnlineListTile(
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/452122817169981440/0bb70fc5a94d036bd678251b412889b3.webp?size=32',
-                  username: 'Hary Suryanto',
+                  username: 'hary',
                 ),
                 SizedBox(height: 10),
                 OnlineListTile(
@@ -87,7 +87,7 @@ class Online extends StatelessWidget {
                 OnlineListTile(
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                  username: 'Dicka',
+                  username: 'Muhidin',
                   activity: 'Mancing',
                   isOnline: false,
                 ),
@@ -103,7 +103,7 @@ class Online extends StatelessWidget {
                 OnlineListTile(
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                  username: 'Dicka',
+                  username: 'Muhidin',
                   activity: 'Mancing',
                   isOnline: false,
                 ),
@@ -119,7 +119,7 @@ class Online extends StatelessWidget {
                 OnlineListTile(
                   imageUrl:
                       'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                  username: 'Dicka',
+                  username: 'Muhidin',
                   activity: 'Mancing',
                   isOnline: false,
                 ),

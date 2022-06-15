@@ -48,7 +48,7 @@ class _ChatState extends State<Chat> {
                   MessageBlock(
                       imageUrl:
                           'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                      username: 'Dicka',
+                      username: 'Muhidin',
                       date: '05/13/2022',
                       message: 'hi guys'),
                   MessageBlock(
@@ -56,11 +56,11 @@ class _ChatState extends State<Chat> {
                           'https://cdn.discordapp.com/avatars/261757574540427264/a2ea26914414bf8cae191a4eb6d96313.webp?size=80',
                       username: 'Andi',
                       date: '05/13/2022',
-                      message: 'Dickaaaaa'),
+                      message: 'Muhidiiiin'),
                   MessageBlock(
                       imageUrl:
                           'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                      username: 'Dicka',
+                      username: 'Muhidin',
                       date: '05/13/2022',
                       message: 'euy'),
                   MessageBlock(
@@ -75,11 +75,11 @@ class _ChatState extends State<Chat> {
                           'https://cdn.discordapp.com/avatars/261757574540427264/a2ea26914414bf8cae191a4eb6d96313.webp?size=80',
                       username: 'Andi',
                       date: '05/13/2022',
-                      message: 'Valo Dick'),
+                      message: 'Valo Din'),
                   MessageBlock(
                       imageUrl:
                           'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                      username: 'Dicka',
+                      username: 'Muhidin',
                       date: '05/13/2022',
                       message: 'hayu andi'),
                   MessageBlock(
@@ -93,7 +93,7 @@ class _ChatState extends State<Chat> {
                   MessageBlock(
                     imageUrl:
                         'https://cdn.discordapp.com/avatars/653186965474377737/de05515d03b7202a568d0281460c0b41.webp?size=80',
-                    username: 'Dicka',
+                    username: 'Muhidin',
                     date: '05/13/2022',
                     message: 'hayu @King Jom-Uy',
                     isMentionedMe: true,
