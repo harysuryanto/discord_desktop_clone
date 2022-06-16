@@ -17,7 +17,8 @@ Discord clone using Flutter for Windows and web.
   Or try out the [web](https://discord-flutter.netlify.app) version.
 
 # 🖼 Screenshots
-![Discord Clone Flutter](https://user-images.githubusercontent.com/17674038/171520996-504257f2-2058-491d-beb3-e92317519ab1.png)
+![discord clone ss bg light](https://user-images.githubusercontent.com/17674038/174004293-284f1ad2-1a0b-4b8b-bc51-62302d7d5f33.png)
+
 
 # ✔ TODO
 - [x] Add splash screen
